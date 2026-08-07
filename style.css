@@ -1,0 +1,377 @@
+/* ==========================================
+   AL RAHMAN ICE FACTORY
+   Professional Ice Theme
+========================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#eef8ff;
+color:#222;
+line-height:1.7;
+overflow-x:hidden;
+}
+
+/* Navigation */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(15px);
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+z-index:999;
+}
+
+.navbar{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 25px;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#008cff;
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+gap:28px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#222;
+font-weight:600;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#00aaff;
+}
+
+.call-btn{
+background:#00aaff;
+padding:12px 24px;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
+}
+
+.call-btn:hover{
+background:#0080ff;
+transform:translateY(-2px);
+}
+
+/* Hero */
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+background:
+linear-gradient(rgba(0,120,255,.55),
+rgba(0,180,255,.45)),
+url("https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.hero-content{
+max-width:800px;
+}
+
+.hero h1{
+font-size:62px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:21px;
+margin-bottom:35px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 35px;
+background:white;
+color:#0099ff;
+text-decoration:none;
+border-radius:50px;
+font-weight:700;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+.btn-outline{
+background:transparent;
+border:2px solid white;
+color:white;
+}
+
+.btn-outline:hover{
+background:white;
+color:#0099ff;
+}
+
+/* Sections */
+
+section{
+padding:100px 20px;
+}
+
+section h2{
+font-size:40px;
+text-align:center;
+margin-bottom:45px;
+color:#008cff;
+}
+
+/* About */
+
+.about{
+max-width:1000px;
+margin:auto;
+text-align:center;
+font-size:18px;
+}
+
+/* Products */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+max-width:1200px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.35s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,140,255,.25);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#0099ff;
+font-size:24px;
+}
+/* Gallery */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1200px;
+margin:auto;
+}
+
+.photo{
+height:220px;
+background:linear-gradient(135deg,#b8ecff,#7fd3ff);
+border-radius:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:22px;
+font-weight:600;
+color:#fff;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.35s;
+cursor:pointer;
+}
+
+.photo:hover{
+transform:scale(1.05);
+box-shadow:0 20px 40px rgba(0,140,255,.25);
+}
+
+/* Video */
+
+.video-box{
+max-width:900px;
+margin:auto;
+background:#fff;
+padding:60px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* Contact */
+
+.contact-box{
+max-width:750px;
+margin:auto;
+background:white;
+padding:45px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.contact-box h3{
+font-size:32px;
+margin-bottom:20px;
+color:#0099ff;
+}
+
+.contact-box p{
+margin:18px 0;
+font-size:18px;
+}
+
+.contact-box a{
+color:#008cff;
+text-decoration:none;
+font-weight:600;
+}
+
+.whatsapp{
+display:inline-block;
+margin-top:25px;
+background:#25D366;
+color:white !important;
+padding:15px 35px;
+border-radius:50px;
+transition:.3s;
+}
+
+.whatsapp:hover{
+transform:translateY(-3px);
+background:#1da851;
+}
+
+/* Footer */
+
+footer{
+background:#003b63;
+color:white;
+text-align:center;
+padding:40px 20px;
+margin-top:60px;
+}
+
+footer p{
+font-size:16px;
+line-height:1.8;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:44px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.navbar{
+flex-direction:column;
+gap:20px;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.call-btn{
+width:100%;
+text-align:center;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero{
+padding:20px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.btn{
+width:100%;
+}
+
+section h2{
+font-size:30px;
+}
+
+.logo{
+font-size:20px;
+}
+
+}
+
+/* Smooth Fade Animation */
+
+.card,
+.photo,
+.contact-box,
+.video-box{
+animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
