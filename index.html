@@ -1,1063 +1,1334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Al Rahman Ice Factory | Mandi Shah Jewana, Jhang</title>
-
-  <meta name="description"
-        content="Al Rahman Ice Factory - Premium quality ice supply in Mandi Shah Jewana, Tehsil & District Jhang, Pakistan.">
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #eefaff;
-      color: #123047;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* ================= HEADER ================= */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #cceaf7;
-    }
-
-    .nav {
-      max-width: 1150px;
-      margin: auto;
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      font-size: 21px;
-      font-weight: 800;
-      color: #087ea4;
-    }
-
-    .logo span {
-      display: block;
-      font-size: 12px;
-      font-weight: 500;
-      color: #557080;
-      margin-top: 2px;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-
-    nav a {
-      font-size: 14px;
-      font-weight: 700;
-      color: #23485d;
-      transition: 0.2s;
-    }
-
-    nav a:hover {
-      color: #0799ce;
-    }
-
-    .lang-btn {
-      border: none;
-      background: #0b94c5;
-      color: white;
-      padding: 9px 13px;
-      border-radius: 20px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    /* ================= HERO ================= */
-
-    .hero {
-      min-height: 88vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(rgba(225,248,255,0.82), rgba(239,252,255,0.95));
-    }
-
-    .hero::before,
-    .hero::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.7);
-      filter: blur(2px);
-    }
-
-    .hero::before {
-      width: 300px;
-      height: 300px;
-      top: -100px;
-      right: -80px;
-    }
-
-    .hero::after {
-      width: 220px;
-      height: 220px;
-      bottom: -80px;
-      left: -70px;
-    }
-
-    .hero-content {
-      max-width: 1150px;
-      width: 100%;
-      margin: auto;
-      padding: 70px 20px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .ice-label {
-      display: inline-block;
-      padding: 8px 14px;
-      background: white;
-      border: 1px solid #b9e8f8;
-      border-radius: 30px;
-      color: #087ea4;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 18px;
-      box-shadow: 0 5px 20px rgba(27,142,184,0.08);
-    }
-
-    .hero h1 {
-      max-width: 800px;
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.02;
-      color: #083c59;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 span {
-      color: #079bd0;
-    }
-
-    .hero p {
-      max-width: 700px;
-      font-size: 18px;
-      color: #496777;
-      margin-bottom: 30px;
-    }
-
-    .urdu {
-      direction: rtl;
-      text-align: right;
-      font-family: Arial, "Noto Nastaliq Urdu", sans-serif;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 13px 20px;
-      border-radius: 30px;
-      font-weight: 800;
-      border: 1px solid transparent;
-      transition: transform .2s, box-shadow .2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: #079bd0;
-      color: white;
-      box-shadow: 0 10px 25px rgba(7,155,208,0.25);
-    }
-
-    .btn-light {
-      background: white;
-      color: #087ea4;
-      border-color: #bce7f5;
-    }
-
-    /* ================= SECTIONS ================= */
-
-    section {
-      padding: 80px 20px;
-    }
-
-    .container {
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    .section-label {
-      color: #079bd0;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    section h2 {
-      font-size: clamp(30px, 5vw, 48px);
-      line-height: 1.1;
-      color: #083c59;
-      margin-bottom: 18px;
-    }
-
-    .section-intro {
-      max-width: 750px;
-      color: #5c7482;
-      margin-bottom: 35px;
-    }
-
-    /* ================= ABOUT ================= */
-
-    .about {
-      background: white;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 35px;
-      align-items: center;
-    }
-
-    .about-text p {
-      margin-bottom: 16px;
-      color: #536d7b;
-    }
-
-    .urdu-box {
-      background: #edfaff;
-      border: 1px solid #c8edf9;
-      padding: 20px;
-      border-radius: 18px;
-      margin-top: 22px;
-      font-size: 18px;
-      color: #22556c;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-    }
-
-    .stat {
-      background: linear-gradient(145deg, #f8fdff, #e4f8ff);
-      border: 1px solid #c6eaf6;
-      padding: 25px;
-      border-radius: 20px;
-      text-align: center;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 32px;
-      color: #078dbd;
-      margin-bottom: 5px;
-    }
-
-    .stat span {
-      color: #58707d;
-      font-size: 14px;
-    }
-
-    /* ================= SERVICES ================= */
-
-    .services {
-      background: #edfaff;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid #cbeaf4;
-      border-radius: 22px;
-      padding: 28px;
-      box-shadow: 0 10px 35px rgba(12,112,151,0.06);
-    }
-
-    .card-icon {
-      width: 55px;
-      height: 55px;
-      border-radius: 16px;
-      background: #e2f7ff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 27px;
-      margin-bottom: 18px;
-    }
-
-    .card h3 {
-      color: #0a4965;
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-
-    .card p {
-      color: #607986;
-      font-size: 15px;
-    }
-
-    /* ================= GALLERY ================= */
-
-    .gallery-section {
-      background: white;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .photo {
-      position: relative;
-      min-height: 280px;
-      overflow: hidden;
-      border-radius: 22px;
-      background: #dff6ff;
-      border: 1px solid #bfe7f4;
-      cursor: pointer;
-    }
-
-    .photo-wide {
-      grid-column: span 2;
-    }
-
-    .photo img {
-      width: 100%;
-      height: 100%;
-      min-height: 280px;
-      object-fit: cover;
-      transition: transform .4s;
-    }
-
-    .photo:hover img {
-      transform: scale(1.04);
-    }
-
-    /* ================= VIDEO ================= */
-
-    .video-section {
-      background: linear-gradient(135deg, #e6f9ff, #f7fdff);
-    }
-
-    .video-box {
-      background: #082f46;
-      border-radius: 25px;
-      padding: 10px;
-      box-shadow: 0 20px 50px rgba(8,63,91,0.15);
-      overflow: hidden;
-    }
-
-    .video-box video {
-      width: 100%;
-      display: block;
-      border-radius: 18px;
-      max-height: 650px;
-      background: #041c2a;
-    }
-
-    /* ================= CONTACT ================= */
-
-    .contact {
-      background: #083c59;
-      color: white;
-    }
-
-    .contact h2 {
-      color: white;
-    }
-
-    .contact .section-label {
-      color: #70dcff;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-    }
-
-    .contact-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 22px;
-      padding: 28px;
-    }
-
-    .contact-card h3 {
-      margin-bottom: 15px;
-      color: #bdefff;
-    }
-
-    .contact-card p {
-      color: #d4edf6;
-      margin-bottom: 8px;
-    }
-
-    .phone {
-      font-size: 19px;
-      font-weight: 800;
-      color: white;
-    }
-
-    /* ================= FOOTER ================= */
-
-    footer {
-      background: #052b3f;
-      color: #a8c8d5;
-      text-align: center;
-      padding: 25px 20px;
-      font-size: 14px;
-    }
-
-    /* ================= LIGHTBOX ================= */
-
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 5000;
-      inset: 0;
-      background: rgba(0,20,30,0.94);
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .lightbox.show {
-      display: flex;
-    }
-
-    .lightbox img {
-      max-width: 95vw;
-      max-height: 90vh;
-      object-fit: contain;
-      border-radius: 12px;
-    }
-
-    .close {
-      position: fixed;
-      top: 20px;
-      right: 25px;
-      font-size: 40px;
-      color: white;
-      cursor: pointer;
-      line-height: 1;
-    }
-
-    /* ================= MOBILE ================= */
-
-    @media (max-width: 800px) {
-
-      .nav {
-        flex-wrap: wrap;
-      }
-
-      nav {
-        width: 100%;
-        justify-content: center;
-        gap: 13px;
-        flex-wrap: wrap;
-      }
-
-      nav a {
-        font-size: 13px;
-      }
-
-      .hero {
-        min-height: 80vh;
-      }
-
-      .hero-content {
-        padding: 55px 20px;
-      }
-
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .photo-wide {
-        grid-column: span 1;
-      }
-
-      .stats {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 500px) {
-
-      section {
-        padding: 60px 16px;
-      }
-
-      .hero-content {
-        padding-left: 16px;
-        padding-right: 16px;
-      }
-
-      .hero h1 {
-        font-size: 44px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .photo,
-      .photo img {
-        min-height: 230px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Al Rahman Ice Factory | Mandi Shah Jewana, Jhang</title>
+
+<meta name="description"
+content="Al Rahman Ice Factory - Premium quality ice supply in Mandi Shah Jewana, Tehsil & District Jhang, Pakistan.">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#eefaff;
+color:#123047;
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+button{
+font-family:inherit;
+}
+
+/* ================= HEADER ================= */
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(255,255,255,.96);
+backdrop-filter:blur(10px);
+border-bottom:1px solid #cceaf7;
+}
+
+.nav{
+max-width:1150px;
+margin:auto;
+padding:15px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+
+.logo{
+font-size:21px;
+font-weight:800;
+color:#087ea4;
+}
+
+.logo span{
+display:block;
+font-size:12px;
+font-weight:500;
+color:#557080;
+margin-top:2px;
+}
+
+nav{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+nav a{
+font-size:14px;
+font-weight:700;
+color:#23485d;
+transition:.2s;
+}
+
+nav a:hover{
+color:#0799ce;
+}
+
+.lang-btn{
+border:none;
+background:#0b94c5;
+color:white;
+padding:9px 13px;
+border-radius:20px;
+font-weight:700;
+cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+min-height:88vh;
+display:flex;
+align-items:center;
+position:relative;
+overflow:hidden;
+background:linear-gradient(
+rgba(225,248,255,.82),
+rgba(239,252,255,.95)
+);
+}
+
+.hero:before,
+.hero:after{
+content:"";
+position:absolute;
+border-radius:50%;
+background:rgba(255,255,255,.7);
+}
+
+.hero:before{
+width:320px;
+height:320px;
+top:-120px;
+right:-80px;
+}
+
+.hero:after{
+width:230px;
+height:230px;
+bottom:-90px;
+left:-70px;
+}
+
+.hero-content{
+max-width:1150px;
+width:100%;
+margin:auto;
+padding:70px 20px;
+position:relative;
+z-index:2;
+}
+
+.ice-label{
+display:inline-block;
+padding:8px 14px;
+background:white;
+border:1px solid #b9e8f8;
+border-radius:30px;
+color:#087ea4;
+font-size:13px;
+font-weight:700;
+margin-bottom:18px;
+box-shadow:0 5px 20px rgba(27,142,184,.08);
+}
+
+.hero h1{
+max-width:800px;
+font-size:clamp(42px,7vw,76px);
+line-height:1.02;
+color:#083c59;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#079bd0;
+}
+
+.hero p{
+max-width:700px;
+font-size:18px;
+color:#496777;
+margin-bottom:30px;
+}
+
+.urdu{
+direction:rtl;
+text-align:right;
+font-family:Arial,"Noto Nastaliq Urdu",sans-serif;
+}
+
+.hero-buttons{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:13px 20px;
+border-radius:30px;
+font-weight:800;
+border:1px solid transparent;
+transition:transform .2s,box-shadow .2s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+.btn-primary{
+background:#079bd0;
+color:white;
+box-shadow:0 10px 25px rgba(7,155,208,.25);
+}
+
+.btn-light{
+background:white;
+color:#087ea4;
+border-color:#bce7f5;
+}
+
+.btn-whatsapp{
+background:#18b957;
+color:white;
+}
+
+.btn-map{
+background:#ffffff;
+color:#087ea4;
+border-color:#bce7f5;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+padding:80px 20px;
+}
+
+.container{
+max-width:1150px;
+margin:auto;
+}
+
+.section-label{
+color:#079bd0;
+font-size:13px;
+font-weight:800;
+letter-spacing:1px;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+
+section h2{
+font-size:clamp(30px,5vw,48px);
+line-height:1.1;
+color:#083c59;
+margin-bottom:18px;
+}
+
+.section-intro{
+max-width:750px;
+color:#5c7482;
+margin-bottom:35px;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+background:white;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:35px;
+align-items:center;
+}
+
+.about-text p{
+margin-bottom:16px;
+color:#536d7b;
+}
+
+.urdu-box{
+background:#edfaff;
+border:1px solid #c8edf9;
+padding:20px;
+border-radius:18px;
+margin-top:22px;
+font-size:18px;
+color:#22556c;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.stat{
+background:linear-gradient(145deg,#f8fdff,#e4f8ff);
+border:1px solid #c6eaf6;
+padding:25px;
+border-radius:20px;
+text-align:center;
+}
+
+.stat strong{
+display:block;
+font-size:32px;
+color:#078dbd;
+margin-bottom:5px;
+}
+
+.stat span{
+color:#58707d;
+font-size:14px;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+background:#edfaff;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.card{
+background:white;
+border:1px solid #cbeaf4;
+border-radius:22px;
+padding:28px;
+box-shadow:0 10px 35px rgba(12,112,151,.06);
+}
+
+.card-icon{
+width:55px;
+height:55px;
+border-radius:16px;
+background:#e2f7ff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:27px;
+margin-bottom:18px;
+}
+
+.card h3{
+color:#0a4965;
+margin-bottom:10px;
+font-size:20px;
+}
+
+.card p{
+color:#607986;
+font-size:15px;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery-section{
+background:white;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.photo{
+position:relative;
+min-height:280px;
+overflow:hidden;
+border-radius:22px;
+background:#dff6ff;
+border:1px solid #bfe7f4;
+cursor:pointer;
+}
+
+.photo-wide{
+grid-column:span 2;
+}
+
+.photo img{
+width:100%;
+height:100%;
+min-height:280px;
+object-fit:cover;
+transition:transform .4s;
+}
+
+.photo:hover img{
+transform:scale(1.04);
+}
+
+/* ================= VIDEO ================= */
+
+.video-section{
+background:linear-gradient(135deg,#e6f9ff,#f7fdff);
+}
+
+.video-box{
+background:#082f46;
+border-radius:25px;
+padding:10px;
+box-shadow:0 20px 50px rgba(8,63,91,.15);
+overflow:hidden;
+}
+
+.video-box video{
+width:100%;
+display:block;
+border-radius:18px;
+max-height:650px;
+background:#041c2a;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+background:#083c59;
+color:white;
+}
+
+.contact h2{
+color:white;
+}
+
+.contact .section-label{
+color:#70dcff;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+.contact-card{
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.15);
+border-radius:22px;
+padding:28px;
+}
+
+.contact-card h3{
+margin-bottom:15px;
+color:#bdefff;
+}
+
+.contact-card p{
+color:#d4edf6;
+margin-bottom:8px;
+}
+
+.phone{
+font-size:19px;
+font-weight:800;
+color:white;
+}
+
+.contact-actions{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:18px;
+}
+
+.contact-actions a{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:11px 16px;
+border-radius:25px;
+font-weight:800;
+font-size:14px;
+}
+
+.call-button{
+background:#079bd0;
+color:white;
+}
+
+.whatsapp-button{
+background:#18b957;
+color:white;
+}
+
+.map-button{
+background:white;
+color:#087ea4;
+}
+
+/* ================= MAP ================= */
+
+.location-section{
+background:#edfaff;
+}
+
+.location-card{
+background:white;
+border:1px solid #cbeaf4;
+border-radius:25px;
+padding:30px;
+text-align:center;
+box-shadow:0 10px 35px rgba(12,112,151,.06);
+}
+
+.location-icon{
+font-size:45px;
+margin-bottom:12px;
+}
+
+.location-card h3{
+color:#083c59;
+font-size:25px;
+margin-bottom:8px;
+}
+
+.location-card p{
+color:#607986;
+margin-bottom:20px;
+}
+
+.big-map-button{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+background:#079bd0;
+color:white;
+padding:14px 24px;
+border-radius:30px;
+font-weight:800;
+box-shadow:0 10px 25px rgba(7,155,208,.22);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+background:#052b3f;
+color:#a8c8d5;
+text-align:center;
+padding:25px 20px;
+font-size:14px;
+}
+
+footer p{
+margin:4px 0;
+}
+
+/* ================= LIGHTBOX ================= */
+
+.lightbox{
+display:none;
+position:fixed;
+z-index:5000;
+inset:0;
+background:rgba(0,20,30,.94);
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.lightbox.show{
+display:flex;
+}
+
+.lightbox img{
+max-width:95vw;
+max-height:90vh;
+object-fit:contain;
+border-radius:12px;
+}
+
+.close{
+position:fixed;
+top:20px;
+right:25px;
+font-size:40px;
+color:white;
+cursor:pointer;
+line-height:1;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
+
+.nav{
+flex-wrap:wrap;
+}
+
+nav{
+width:100%;
+justify-content:center;
+gap:13px;
+flex-wrap:wrap;
+}
+
+nav a{
+font-size:13px;
+}
+
+.hero{
+min-height:80vh;
+}
+
+.hero-content{
+padding:55px 20px;
+}
+
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.photo-wide{
+grid-column:span 1;
+}
+
+.stats{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:500px){
+
+section{
+padding:60px 16px;
+}
+
+.hero-content{
+padding-left:16px;
+padding-right:16px;
+}
+
+.hero h1{
+font-size:44px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.btn{
+width:100%;
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.photo,
+.photo img{
+min-height:230px;
+}
+
+.contact-actions{
+flex-direction:column;
+}
+
+.contact-actions a{
+width:100%;
+}
+
+}
+
+/* ================= FLOATING CONTACT BUTTONS ================= */
+
+.floating-buttons{
+position:fixed;
+right:15px;
+bottom:18px;
+z-index:2000;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.floating-buttons a{
+width:52px;
+height:52px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:23px;
+box-shadow:0 6px 20px rgba(0,0,0,.2);
+}
+
+.float-call{
+background:#079bd0;
+color:white;
+}
+
+.float-whatsapp{
+background:#18b957;
+color:white;
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- ================= HEADER ================= -->
+<!-- ================= HEADER ================= -->
 
-  <header>
-    <div class="nav">
+<header>
 
-      <a href="#home" class="logo">
-        Al Rahman Ice Factory
-        <span>Mandi Shah Jewana • Jhang</span>
-      </a>
+<div class="nav">
 
-      <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#video">Video</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<a href="#home" class="logo">
+Al Rahman Ice Factory
+<span>Mandi Shah Jewana • Jhang</span>
+</a>
 
-      <button class="lang-btn" onclick="toggleLanguage()">
-        اردو
-      </button>
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#video">Video</a>
+<a href="#contact">Contact</a>
+<a href="#location">Location</a>
+</nav>
 
-    </div>
-  </header>
+<button class="lang-btn" onclick="toggleLanguage()">
+اردو
+</button>
 
+</div>
 
-  <!-- ================= HERO ================= -->
+</header>
 
-  <main>
 
-    <section class="hero" id="home">
+<!-- ================= HERO ================= -->
 
-      <div class="hero-content">
+<main>
 
-        <div class="ice-label">
-          ❄ Premium Ice Supply
-        </div>
+<section class="hero" id="home">
 
-        <h1>
-          Pure Ice.<br>
-          <span>Trusted Service.</span>
-        </h1>
+<div class="hero-content">
 
-        <p>
-          Welcome to Al Rahman Ice Factory,
-          serving Mandi Shah Jewana and surrounding areas
-          with quality ice and dependable service.
-        </p>
+<div class="ice-label">
+❄ Premium Ice Supply
+</div>
 
-        <p class="urdu" id="heroUrdu" style="display:none;">
-          الحمدللہ، الرحمٰن آئس فیکٹری معیاری برف اور بہترین سروس
-          کے ساتھ منڈی شاہ جیوانہ اور گردونواح میں خدمت فراہم کر رہی ہے۔
-        </p>
+<h1>
+Pure Ice.<br>
+<span>Trusted Service.</span>
+</h1>
 
-        <div class="hero-buttons">
+<p>
+Welcome to Al Rahman Ice Factory,
+serving Mandi Shah Jewana and surrounding areas
+with quality ice and dependable service.
+</p>
 
-          <a href="#gallery" class="btn btn-primary">
-            View Our Photos
-          </a>
+<p class="urdu" id="heroUrdu" style="display:none;">
+الحمدللہ، الرحمٰن آئس فیکٹری معیاری برف اور بہترین سروس
+کے ساتھ منڈی شاہ جیوانہ اور گردونواح میں خدمت فراہم کر رہی ہے۔
+</p>
 
-          <a href="#contact" class="btn btn-light">
-            Contact Us
-          </a>
+<div class="hero-buttons">
 
-        </div>
+<a href="tel:+923095518398" class="btn btn-primary">
+📞 Call Now
+</a>
 
-      </div>
+<a href="https://wa.me/923095518398" target="_blank" class="btn btn-whatsapp">
+💬 WhatsApp
+</a>
 
-    </section>
+<a href="https://maps.app.goo.gl/aDrSyENyGSxXPpyj6"
+target="_blank"
+class="btn btn-light">
+📍 Google Maps
+</a>
 
+</div>
 
-    <!-- ================= ABOUT ================= -->
+</div>
 
-    <section class="about" id="about">
+</section>
 
-      <div class="container">
 
-        <div class="about-grid">
+<!-- ================= ABOUT ================= -->
 
-          <div class="about-text">
+<section class="about" id="about">
 
-            <div class="section-label">
-              About Us
-            </div>
+<div class="container">
 
-            <h2>
-              Serving our community with ice.
-            </h2>
+<div class="about-grid">
 
-            <p>
-              Al Rahman Ice Factory is a local ice factory
-              located in Mandi Shah Jewana, Tehsil & District Jhang,
-              Pakistan.
-            </p>
+<div class="about-text">
 
-            <p>
-              Our goal is simple:
-              provide quality ice, reliable service,
-              and dependable supply to our customers.
-            </p>
+<div class="section-label">
+About Us
+</div>
 
-            <div class="urdu-box urdu">
+<h2>
+Serving our community with ice.
+</h2>
 
-              الرحمٰن آئس فیکٹری،
-              منڈی شاہ جیوانہ تحصیل و ضلع جھنگ میں
-              معیاری برف کی فراہمی کے لیے قائم ہے۔
-              ہمارا مقصد اپنے صارفین کو اچھی کوالٹی اور
-              قابلِ اعتماد سروس فراہم کرنا ہے۔
+<p>
+Al Rahman Ice Factory is a local ice factory
+located in Mandi Shah Jewana, Tehsil & District Jhang,
+Pakistan.
+</p>
 
-            </div>
+<p>
+Our goal is simple:
+provide quality ice, reliable service,
+and dependable supply to our customers.
+</p>
 
-          </div>
+<div class="urdu-box urdu">
 
+الرحمٰن آئس فیکٹری،
+منڈی شاہ جیوانہ تحصیل و ضلع جھنگ میں
+معیاری برف کی فراہمی کے لیے قائم ہے۔
+ہمارا مقصد اپنے صارفین کو اچھی کوالٹی اور
+قابلِ اعتماد سروس فراہم کرنا ہے۔
 
-          <div class="stats">
+</div>
 
-            <div class="stat">
-              <strong>30+</strong>
-              <span>Years of Service</span>
-            </div>
+</div>
 
-            <div class="stat">
-              <strong>100%</strong>
-              <span>Quality Focus</span>
-            </div>
 
-            <div class="stat">
-              <strong>24/7</strong>
-              <span>Customer Support</span>
-            </div>
+<div class="stats">
 
-            <div class="stat">
-              <strong>Jhang</strong>
-              <span>Our Location</span>
-            </div>
+<div class="stat">
+<strong>30+</strong>
+<span>Years of Service</span>
+</div>
 
-          </div>
+<div class="stat">
+<strong>100%</strong>
+<span>Quality Focus</span>
+</div>
 
-        </div>
+<div class="stat">
+<strong>24/7</strong>
+<span>Customer Support</span>
+</div>
 
-      </div>
+<div class="stat">
+<strong>Jhang</strong>
+<span>Our Location</span>
+</div>
 
-    </section>
+</div>
 
+</div>
 
-    <!-- ================= SERVICES ================= -->
+</div>
 
-    <section class="services" id="services">
+</section>
 
-      <div class="container">
 
-        <div class="section-label">
-          What We Provide
-        </div>
+<!-- ================= SERVICES ================= -->
 
-        <h2>
-          Quality ice for your needs.
-        </h2>
+<section class="services" id="services">
 
-        <p class="section-intro">
-          We focus on supplying clean, quality ice
-          with dependable service to our local customers.
-        </p>
+<div class="container">
 
+<div class="section-label">
+What We Provide
+</div>
 
-        <div class="cards">
+<h2>
+Quality ice for your needs.
+</h2>
 
-          <div class="card">
+<p class="section-intro">
+We focus on supplying clean, quality ice
+with dependable service to our local customers.
+</p>
 
-            <div class="card-icon">
-              ❄️
-            </div>
+<div class="cards">
 
-            <h3>
-              Quality Ice
-            </h3>
+<div class="card">
 
-            <p>
-              Quality ice produced with care
-              for reliable everyday use.
-            </p>
+<div class="card-icon">❄️</div>
 
-          </div>
+<h3>Quality Ice</h3>
 
+<p>
+Quality ice produced with care
+for reliable everyday use.
+</p>
 
-          <div class="card">
+</div>
 
-            <div class="card-icon">
-              🧊
-            </div>
 
-            <h3>
-              Ice Supply
-            </h3>
+<div class="card">
 
-            <p>
-              Convenient local ice supply
-              for customers and businesses.
-            </p>
+<div class="card-icon">🧊</div>
 
-          </div>
+<h3>Ice Supply</h3>
 
+<p>
+Convenient local ice supply
+for customers and businesses.
+</p>
 
-          <div class="card">
+</div>
 
-            <div class="card-icon">
-              🤝
-            </div>
 
-            <h3>
-              Trusted Service
-            </h3>
+<div class="card">
 
-            <p>
-              Friendly and dependable service
-              for our local community.
-            </p>
+<div class="card-icon">🤝</div>
 
-          </div>
+<h3>Trusted Service</h3>
 
-        </div>
+<p>
+Friendly and dependable service
+for our local community.
+</p>
 
-      </div>
+</div>
 
-    </section>
+</div>
 
+</div>
 
-    <!-- ================= GALLERY ================= -->
+</section>
 
-    <section class="gallery-section" id="gallery">
 
-      <div class="container">
+<!-- ================= GALLERY ================= -->
 
-        <div class="section-label">
-          Real Photos
-        </div>
+<section class="gallery-section" id="gallery">
 
-        <h2>
-          Inside Al Rahman Ice Factory.
-        </h2>
+<div class="container">
 
-        <p class="section-intro">
-          A look at our ice and our work.
-          Tap any image to view it larger.
-        </p>
+<div class="section-label">
+Real Photos
+</div>
 
+<h2>
+Inside Al Rahman Ice Factory.
+</h2>
 
-        <div class="gallery">
+<p class="section-intro">
+A look at our ice and our work.
+Tap any image to view it larger.
+</p>
 
-          <!-- EXACT GITHUB FILENAME #1 -->
 
-          <div class="photo photo-wide">
+<div class="gallery">
 
-            <img
-              src="IMG_20260606_063255.jpg"
-              alt="Al Rahman Ice Factory ice blocks"
-              onclick="openLightbox(this.src)"
-            >
+<!-- EXACT FILE NAME -->
 
-          </div>
+<div class="photo photo-wide">
 
+<img
+src="IMG_20260606_063255.jpg"
+alt="Al Rahman Ice Factory ice blocks"
+onclick="openLightbox(this.src)"
+>
 
-          <!-- EXACT GITHUB FILENAME #2 -->
+</div>
 
-          <div class="photo">
 
-            <img
-              src="images (28)_1786101485927.jpeg"
-              alt="Ice at Al Rahman Ice Factory"
-              onclick="openLightbox(this.src)"
-            >
+<!-- EXACT FILE NAME -->
 
-          </div>
+<div class="photo">
 
-        </div>
+<img
+src="images (28)_1786101485927.jpeg"
+alt="Ice at Al Rahman Ice Factory"
+onclick="openLightbox(this.src)"
+>
 
-      </div>
+</div>
 
-    </section>
+</div>
 
+</div>
 
-    <!-- ================= VIDEO ================= -->
+</section>
 
-    <section class="video-section" id="video">
 
-      <div class="container">
+<!-- ================= VIDEO ================= -->
 
-        <div class="section-label">
-          Factory Video
-        </div>
+<section class="video-section" id="video">
 
-        <h2>
-          A closer look at Al Rahman.
-        </h2>
+<div class="container">
 
-        <p class="section-intro">
-          Watch a real video from Al Rahman Ice Factory.
-        </p>
+<div class="section-label">
+Factory Video
+</div>
 
+<h2>
+A closer look at Al Rahman.
+</h2>
 
-        <div class="video-box">
+<p class="section-intro">
+Watch a real video from Al Rahman Ice Factory.
+</p>
 
-          <!-- EXACT GITHUB VIDEO FILENAME -->
+<div class="video-box">
 
-          <video
-            controls
-            playsinline
-            preload="metadata"
-          >
+<!-- EXACT FILE NAME -->
 
-            <source
-              src="VID-20260716-WA0003.mp4"
-              type="video/mp4"
-            >
+<video
+controls
+playsinline
+preload="metadata"
+>
 
-            Your browser does not support video playback.
+<source
+src="VID-20260716-WA0003.mp4"
+type="video/mp4"
+>
 
-          </video>
+Your browser does not support video playback.
 
-        </div>
+</video>
 
-      </div>
+</div>
 
-    </section>
+</div>
 
+</section>
 
-    <!-- ================= CONTACT ================= -->
 
-    <section class="contact" id="contact">
+<!-- ================= LOCATION ================= -->
 
-      <div class="container">
+<section class="location-section" id="location">
 
-        <div class="section-label">
-          Contact
-        </div>
+<div class="container">
 
-        <h2>
-          Get in touch with us.
-        </h2>
+<div class="section-label">
+Find Us
+</div>
 
+<h2>
+Visit Al Rahman Ice Factory.
+</h2>
 
-        <div class="contact-grid">
+<p class="section-intro">
+Find our factory easily using Google Maps.
+</p>
 
-          <div class="contact-card">
+<div class="location-card">
 
-            <h3>
-              📍 Factory Location
-            </h3>
+<div class="location-icon">
+📍
+</div>
 
-            <p>
-              Al Rahman Ice Factory
-            </p>
+<h3>
+Al Rahman Ice Factory
+</h3>
 
-            <p>
-              Mandi Shah Jewana,
-              Tehsil & District Jhang,
-              Pakistan
-            </p>
+<p>
+Mandi Shah Jewana,
+Tehsil & District Jhang,
+Pakistan
+</p>
 
-            <br>
+<a
+href="https://maps.app.goo.gl/aDrSyENyGSxXPpyj6"
+target="_blank"
+class="big-map-button"
+>
+📍 Open Location in Google Maps
+</a>
 
-            <p class="urdu">
-              منڈی شاہ جیوانہ، تحصیل و ضلع جھنگ، پاکستان
-            </p>
+</div>
 
-          </div>
+</div>
 
+</section>
 
-          <div class="contact-card">
 
-            <h3>
-              📞 Contact
-            </h3>
+<!-- ================= CONTACT ================= -->
 
-            <p>
-              Waqar Ali
-            </p>
+<section class="contact" id="contact">
 
-            <p class="phone">
-              0309 5518398
-            </p>
+<div class="container">
 
-            <br>
+<div class="section-label">
+Contact
+</div>
 
-            <p>
-              Abdul Rahman
-            </p>
+<h2>
+Get in touch with us.
+</h2>
 
-            <p class="phone">
-              0341 2222512
-            </p>
 
-          </div>
+<div class="contact-grid">
 
-        </div>
 
-      </div>
+<!-- WAQAR -->
 
-    </section>
+<div class="contact-card">
 
-  </main>
+<h3>
+📞 Waqar Ali
+</h3>
 
+<p>
+Call or message us directly.
+</p>
 
-  <!-- ================= FOOTER ================= -->
+<p class="phone">
+0309 5518398
+</p>
 
-  <footer>
+<div class="contact-actions">
 
-    <p>
-      © <span id="year"></span>
-      Al Rahman Ice Factory.
-      All Rights Reserved.
-    </p>
+<a
+href="tel:+923095518398"
+class="call-button"
+>
+📞 Call Now
+</a>
 
-    <p class="urdu" style="margin-top:5px;">
-      الرحمٰن آئس فیکٹری — معیاری برف، قابلِ اعتماد سروس
-    </p>
+<a
+href="https://wa.me/923095518398"
+target="_blank"
+class="whatsapp-button"
+>
+💬 WhatsApp
+</a>
 
-  </footer>
+</div>
 
+</div>
 
-  <!-- ================= LIGHTBOX ================= -->
 
-  <div
-    class="lightbox"
-    id="lightbox"
-    onclick="closeLightbox()"
-  >
+<!-- ABDUL RAHMAN -->
 
-    <div class="close">
-      ×
-    </div>
+<div class="contact-card">
 
-    <img
-      id="lightboxImage"
-      src=""
-      alt="Al Rahman Ice Factory"
-      onclick="event.stopPropagation()"
-    >
+<h3>
+📞 Abdul Rahman
+</h3>
 
-  </div>
+<p>
+Call or message us directly.
+</p>
 
+<p class="phone">
+0341 2222512
+</p>
 
-  <!-- ================= JAVASCRIPT ================= -->
+<div class="contact-actions">
 
-  <script>
+<a
+href="tel:+923412222512"
+class="call-button"
+>
+📞 Call Now
+</a>
 
-    /* Current year */
+<a
+href="https://wa.me/923412222512"
+target="_blank"
+class="whatsapp-button"
+>
+💬 WhatsApp
+</a>
 
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+</div>
 
+</div>
 
-    /* Image lightbox */
 
-    function openLightbox(src) {
+</div>
 
-      document.getElementById("lightboxImage").src = src;
+</div>
 
-      document
-        .getElementById("lightbox")
-        .classList.add("show");
+</section>
 
-      document.body.style.overflow = "hidden";
-    }
+</main>
 
 
-    function closeLightbox() {
+<!-- ================= FOOTER ================= -->
 
-      document
-        .getElementById("lightbox")
-        .classList.remove("show");
+<footer>
 
-      document.body.style.overflow = "";
+<p>
+© <span id="year"></span>
+Al Rahman Ice Factory.
+All Rights Reserved.
+</p>
 
-      document.getElementById("lightboxImage").src = "";
-    }
+<p class="urdu">
+الرحمٰن آئس فیکٹری — معیاری برف، قابلِ اعتماد سروس
+</p>
 
+</footer>
 
-    /* Close lightbox with ESC */
 
-    document.addEventListener("keydown", function(event) {
+<!-- ================= LIGHTBOX ================= -->
 
-      if (event.key === "Escape") {
+<div
+class="lightbox"
+id="lightbox"
+onclick="closeLightbox()"
+>
+
+<div class="close">
+×
+</div>
+
+<img
+id="lightboxImage"
+src=""
+alt="Al Rahman Ice Factory"
+onclick="event.stopPropagation()"
+>
+
+</div>
+
+
+<!-- ================= FLOATING BUTTONS ================= -->
+
+<div class="floating-buttons">
+
+<a
+href="tel:+923095518398"
+class="float-call"
+title="Call Al Rahman Ice Factory"
+>
+📞
+</a>
+
+<a
+href="https://wa.me/923095518398"
+target="_blank"
+class="float-whatsapp"
+title="WhatsApp Al Rahman Ice Factory"
+>
+💬
+</a>
+
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+/* YEAR */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+/* LIGHTBOX */
+
+function openLightbox(src){
+
+document.getElementById("lightboxImage").src = src;
+
+document
+.getElementById("lightbox")
+.classList.add("show");
+
+document.body.style.overflow="hidden";
+
+}
+
+
+function closeLightbox(){
+
+document
+.getElementById("lightbox")
+.classList.remove("show");
+
+document.body.style.overflow="";
+
+document.getElementById("lightboxImage").src="";
+
+}
+
+
+/* ESCAPE CLOSE */
+
+document.addEventListener("keydown",function(event){
+
+if(event.key==="Escape"){
+closeLightbox();
+}
+
+});
+
+
+/* ENGLISH / URDU */
+
+function toggleLanguage(){
+
+const urdu =
+document.getElementById("heroUrdu");
+
+const button =
+document.querySelector(".lang-btn");
+
+if(urdu.style.display==="none"){
+
+urdu.style.display="block";
+button.textContent="English";
+
+}else{
+
+urdu.style.display="none";
+button.textContent="اردو";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
